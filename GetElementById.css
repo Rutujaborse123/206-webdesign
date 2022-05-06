@@ -1,0 +1,78 @@
+<html>
+<head>
+<script language="javascript">
+function checkname()
+{
+ s=document.getElementById("name")
+ if(s.length==-1)
+ {
+  alert("name should not blank")
+  document.getElementById("name").focus()
+  }
+ }
+ 
+ function checklname()
+ {
+ j=document.getElementById("lname")
+ if(j.length==-1)
+ {
+ alert("name should not blank")
+ document.getElementById("lname").focus()
+ }
+ }
+ 
+ function greetmsg()
+ {
+   alert("welcome on our website")
+  }
+   
+   function bymsg()
+   {
+   alert("Good By!!!")
+   }
+  
+  function showfullname()
+  {
+    f=document.getElementById("name").value
+    s=document.getElementById("lname").value
+    fn=(f+" " +s)
+    document.getElementById("fname").value=fn
+   }
+   
+   function checkblank()
+   {
+   fn=document.getElementById("fname").value
+   if(fn.length==-1)
+   {
+   alert("fullname can not be blank")
+   document.getElementById("fname").focus()
+   }
+   }
+   function mouseoverevent()  
+   {  
+   alert("This is JavaTpoint") 
+   }  
+   function keydownevent()  
+    {  
+        document.getElementById("input1");  
+        alert("Pressed a key");  
+    }  
+</script>
+</head>
+<body bgcolor="#33f5ab" onload="greetmsg()" onunload="bymsg()">
+<form>
+<h1 align=center>Registration form</h1><hr>
+First Name:-<input type="text" id="name" onblur="checkname()"><br><br>
+Last Name:-<input type="text" id="lname" onchang="checklname()"><br><br>
+Full Name:-<input type="text" id="fname" onfocus="showfullname()"><br><br>
+<center><input type="button" id="fname" value="Click " onclick="bymsg()" onmouseover="mouseoverevent()"></center><br><hr>
+
+<h2>Mouseover Event</h2>
+<center><input type="button"  value="Keep cursor over me" onmouseover="mouseoverevent()"></center><br><hr>
+
+<h2>Keydown Event</h2>  
+<input type="text" id="input1" onkeydown="keydownevent()">  
+
+</form>
+</body>
+</html>
